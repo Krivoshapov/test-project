@@ -12,24 +12,45 @@
   };
 
   var Rustam = Object.create(pidor);
+  Rustam.name = 'Рустам';
   Rustam.age = 20;
   Rustam.favocc = a[3];
 
   var Shramko = Object.create(pidor);
+  Shramko.name = 'Шрамко';
   Shramko.age = 19;
   Shramko.fatness = 9000;
 
   var Vlad = Object.create(pidor);
+  Vlad.name = 'Влад';
   Vlad.favocc = a[1];
 
   var Nika = Object.create(pidor);
+  Nika.name = 'Ника';
   Nika.favocc = a[2];
 
   var CatOfNika = Object.create(Nika);
+  CatOfNika.name = 'Кот Ники';
   CatOfNika.favocc = lol[3];
 
-  var scan = function(pidor){
-    return this.favocc+b[3];
+  var name1 = function(pidor){
+    return pidor.name+b[0];
   }
 
-  console.log(pidor.scan);
+  var age1 = function(pidor){
+    return pidor.age+b[1];
+  }
+
+  var fatness1 = function(pidor){
+    return pidor.fatness+b[2];
+  }
+
+  var favocc1 = function(pidor){
+    return pidor.favocc+b[3];
+  }
+
+  console.log('Здесь будут выведены данные об одном из луркоебов-участников конфы:')
+  console.log(name1(Nika));
+  console.log(age1(Nika));
+  console.log(fatness1(Nika));
+  console.log(favocc1(Nika));
