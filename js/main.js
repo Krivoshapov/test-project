@@ -2,7 +2,7 @@
   var lol = ['lol', 'loool', 'lal', 'мяу нахуй'];
   var memes = [keck, lol, "mda", 1488, 34];
   var a = ['дрочить писульку','заниматься любовью с парнями','постить котиков','камвхорить','хамить'];
-  var b = ['-Имя данного луркоеба','-Возраст данного луркоеба','-Толстота данного луркоеба','-Любимое занятие в конфе']
+  var b = ['Имя данного луркоеба:','Возраст данного луркоеба:','Толстота данного луркоеба:','Любимое занятие в конфе:']
   
   var pidor = {
     name:'lurker',
@@ -34,19 +34,19 @@
   CatOfNika.favocc = lol[3];
 
   var name1 = function(pidor){
-    return pidor.name+b[0];
+    return b[0]+pidor.name;
   }
 
   var age1 = function(pidor){
-    return pidor.age+b[1];
+    return b[1]+pidor.age;
   }
 
   var fatness1 = function(pidor){
-    return pidor.fatness+b[2];
+    return b[2]+pidor.fatness;
   }
 
   var favocc1 = function(pidor){
-    return pidor.favocc+b[3];
+    return b[3]+pidor.favocc;
   }
 
   console.log('Здесь будут выведены данные об одном из луркоебов-участников конфы:')
