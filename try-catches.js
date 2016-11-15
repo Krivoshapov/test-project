@@ -15,5 +15,3 @@
         console.log('..oops! no such number in the array is found!');
       }
   }
-
-  console.log(Black.description());
