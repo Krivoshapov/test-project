@@ -1,0 +1,172 @@
+ //Смысл это большого и бесполезного куска был: создать цепочку из основного класса и наследующих из него
+ //те же самые свойства, а потом уже запилить отдельные экземпляры (которыми в данном случае стали бы конкретные
+ //музыкальные группы). Потом по вызову функции можно будет получить описание характеристики того или иного аспекта
+ //в том или ином жанре митола.
+ //я пробовал очень много разных вариантов, прежде чем заебался и переписал это. 
+ //но вопрос не закрыт: как создавать классы и классы, наследующие их свойства, а потом применять к ним функции?
+
+
+  var thumping = ['copying leads', 'full of life', 'crushing', 'funky', 'secondary or muted'];
+  var harsh = ['operatic', 'screaming', 'growling', 'shrieking or snarling', 'shouting'];
+  var distorted = ['crunchy', 'dropped', 'atonal', 'dirty', 'high-pitched tremolo', 'fuzz'];
+  var fast = ['galloping','staccato','blast beat','bombastic','groovy'];
+  var inc = ['none or rare', 'rare and brief', 'extended and technically improved', 'unnecessary', 'saw-like'];
+  var provoking = ['depression and sorrow','metal, rude behaviour, dark literature','evil, hatred, diabolicism','death and torture', 'agression and war', 'social topics', 'personal feelings'];
+  var long = [3, 4, 5, 6, 7];
+  
+  class Metal {
+    constructor(bass, vocals, guitars, drums, solos, lyrics, songlength){
+      Object.assign (this, {
+        bass: thumping,
+        vocals: harsh,
+        guitars: distorted,
+        drums: fast,
+        solos: inc,
+        lyrics: provoking,
+        songlength: long
+      });
+
+      this.bass = thumping;
+      this.vocals = vocals;
+      this.guitars = guitars;
+      this.drums = drums;
+      this.solos = solos;
+      this.lyrics = lyrics;
+      this.songlength = songlength;
+   }
+
+    b(){
+      return this.bass;
+    }
+
+  }
+
+ class Traditional_Heavy extends Metal {
+  constructor(bass, vocals, guitars, drums, solos, lyrics, songlength){
+    Object.assign (this, {
+      bass: thumping [1],
+      vocals: harsh [0],
+      guitars: distorted [0],
+      drums: fast [0],
+      solos: inc [2],
+      lyrics: provoking [1],
+      songlength: long [1]
+      });
+
+      this.bass = bass;
+      this.vocals = vocals;
+      this.guitars = guitars;
+      this.drums = drums;
+      this.solos = solos;
+      this.lyrics = lyrics;
+      this. songlength = songlength;
+    }
+  }
+ class Thrash extends Metal {
+  constructor(bass, vocals, guitars, drums, solos, lyrics, songlength){
+    Object.assign (this, {  
+      bass: thumping [2],
+      vocals: harsh [4],
+      guitars: distorted [2],
+      drums: fast [1],
+      solos: inc [4],
+      lyrics: provoking [4, 5],
+      songlength: long [2]
+      });
+
+      this.bass = bass;
+      this.vocals = vocals;
+      this.guitars = guitars;
+      this.drums = drums;
+      this.solos = solos;
+      this.lyrics = lyrics;
+      this. songlength = songlength;
+    }
+  }
+ class Death extends Metal {
+  constructor(bass, vocals, guitars, drums, solos, lyrics, songlength){ 
+    Object.assign (this, {  
+      bass: thumping [0],
+      vocals: harsh [2],
+      guitars: distorted [1],
+      drums: fast [2],
+      solos: inc [1, 4],
+      lyrics: provoking [3, 4],
+      songlength: long [0]
+      });
+
+      this.bass = bass;
+      this.vocals = vocals;
+      this.guitars = guitars;
+      this.drums = drums;
+      this.solos = solos;
+      this.lyrics = lyrics;
+      this. songlength = songlength;
+    }
+  }
+ class Black extends Metal {
+  constructor(bass, vocals, guitars, drums, solos, lyrics, songlength){
+    Object.assign (this, {
+      bass: thumping [4],
+      vocals: harsh [3],
+      guitars: distorted [4],
+      drums: fast [2],
+      solos: inc [1],
+      lyrics: provoking [2],
+      songlength: long [3]
+      });
+
+      this.bass = bass;
+      this.vocals = vocals;
+      this.guitars = guitars;
+      this.drums = drums;
+      this.solos = solos;
+      this.lyrics = lyrics;
+      this. songlength = songlength;
+    }
+  }
+ class Doom extends Metal{
+  constructor(bass, vocals, guitars, drums, solos, lyrics, songlength){
+    Object.assign (this, {
+      bass: thumping [2],
+      vocals: harsh [0],
+      guitars: distorted [5],
+      drums: fast [3],
+      solos: inc [3],
+      lyrics: provoking [0],
+      songlength: long [4]
+      });
+
+
+      this.bass = bass;
+      this.vocals = vocals;
+      this.guitars = guitars;
+      this.drums = drums;
+      this.solos = solos;
+      this.lyrics = lyrics;
+      this. songlength = songlength;
+    }
+  }
+ class Alternative extends Metal{
+  constructor(bass, vocals, guitars, drums, solos, lyrics, songlength){
+    Object.assign (this, {
+      bass: thumping [3],
+      vocals: harsh [1],
+      guitars: distorted [1],
+      drums: fast [4],
+      solos: inc [0],
+      lyrics: provoking [6],
+      songlength: long [1]
+      });
+
+
+      this.bass = bass;
+      this.vocals = vocals;
+      this.guitars = guitars;
+      this.drums = drums;
+      this.solos = solos;
+      this.lyrics = lyrics;
+      this. songlength = songlength;
+    }
+  }
+ console.log(Metal.b());
