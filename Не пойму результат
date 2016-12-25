@@ -1,0 +1,9 @@
+var objarray = [
+  {scoo:'bee'},
+  {doo:'bey'},
+  {doo:'is'},
+  {very:'cowardous'}
+];
+
+var objfromarray = Object.assign(this, objarray[0], objarray[1], objarray[2], objarray[3]);
+console.log(objfromarray);
