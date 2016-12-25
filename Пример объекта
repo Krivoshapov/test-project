@@ -1,0 +1,34 @@
+var thumping = ['copying lead; ', 'full of life; ', 'crushing; ', 'funky; ', 'secondary or muted; '];
+var harsh = ['operatic; ', 'screaming; ', 'growling; ', 'shrieking or snarling; ', 'shouting; '];
+var distorted = ['crunchy; ', 'dropped; ', 'atonal; ', 'dirty; ', 'high-pitched tremolo; ', 'fuzz; '];
+var fast = ['galloping; ','staccato; ','blast beat; ','bombastic; ','groovy; '];
+var inc = ['none or rare; ', 'rare and brief; ', 'extended and technically improved; ', 'unnecessary; ', 'saw-like; '];
+var provoking = ['depression and sorrow; ','metal, rude behaviour, dark literature; ','evil, hatred, diabolicism; ','death and torture; ', 'agression and war; ', 'social topics; ', 'personal feelings; '];
+var long = [3, 4, 5, 6, 7];
+var descr = ['The following traits are usually considered common for this genre: ', 'bass: ', 'vocals: ', 'guitars: ', 'drums: ', 'guitar solos: ', 'lyrical themes: ', 'average song longitude in minutes: ']
+var genreType = ['This style is a mixture between Doom metal and Hardcore Punk', , 1];
+
+class Metal {
+  constructor(bass, vocals, guitars, drums, solos, lyrics, songlength){
+    Object.assign (this, {
+      bass: thumping,
+      vocals: harsh,
+      guitars: distorted,
+      drums: fast,
+      solos: inc,
+      lyrics: provoking,
+      songlength: long
+    });
+
+    this.bass = bass;
+    this.vocals = vocals;
+    this.guitars = guitars;
+    this.drums = drums;
+    this.solos = solos;
+    this.lyrics = lyrics;
+    this.songlength = songlength;
+  }
+  description(){
+    return descr[0]+descr[1]+this.bass+descr[2]+this.vocals+descr[3]+this.guitars+descr[4]+this.drums+descr[5]+this.solos+descr[6]+this.lyrics+descr[7]+this.songlength+';'
+  }
+}
